@@ -1,8 +1,10 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import CreateBoardActions from "../../../Pageobjects/createBoard/action.cy";
+import CreateBoardAssertion from "../../../Pageobjects/createBoard/assertions.cy";
 
 const createBoardActions = new CreateBoardActions();
+const createBoardAssertion = new CreateBoardAssertion();
 
 
 Given("the user login in trello website",()=>{
@@ -17,21 +19,17 @@ When("clicks on create button",()=>{
 });
 
 When("chooses create board option",()=>{
-    createBoardActions.clickOnCreateBorardButton();
+    createBoardActions.chooseOnCreateBoradButton();
 });
 
 When("types in board title input filed the board name",()=>{
-    
-});
-
-When("chooses workspace",()=>{
-    
+    createBoardActions.typeBoardTitle();
 });
 
 When("clicks on Create button",()=>{
-    
+    createBoardActions.clickOnCreateBoradButton();
 });
 
 Then("the board will be crated succssfuly",()=>{
-    
+    createBoardAssertion.checkBoardNameContainValue();
 });

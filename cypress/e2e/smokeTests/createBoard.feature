@@ -5,6 +5,5 @@ Feature: Create New Board
     When clicks on create button
     And chooses create board option
     And types in board title input filed the board name
-    And chooses workspace
     And clicks on Create button
     Then the board will be crated succssfuly
