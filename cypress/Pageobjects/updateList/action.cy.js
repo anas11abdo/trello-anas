@@ -25,7 +25,7 @@ class UpdateListActions{
     }
     clicksOnTheCardDiscreption(){
         cy.origin("https://trello.com",()=>{
-            cy.get('.LDTYZ4htfrP9Xl').click();
+            cy.get('.LDTYZ4htfrP9Xl').click({force : true});
             });
     return this;
     }

@@ -4,6 +4,8 @@ module.exports = defineConfig({
  e2e: {
   specPattern: "**/*.feature",
   baseUrl : "https://trello.com/",
+  video : true,
+  trashAssetsBeforeRuns : false,
    setupNodeEvents(on, config) {
      on("file:preprocessor", cucumber());
    },

@@ -26,7 +26,8 @@ class CreateListActions{
     }
     clicksOnAddACard(){
         cy.origin("https://trello.com",()=>{
-            cy.get('[data-testid="list-add-card-button"]').click({multiple:true});
+            cy.get('[data-testid="list-add-card-button"]').click();
+            cy.wait(2000);
             });
     return this;
     }
