@@ -2,7 +2,6 @@ Feature: Create New List
 
     Scenario: validate that the user can create new list
     Given the user login in trello website
-    # When clicks on boards button
     When chooses the board 
     And clicks on add a list
     And types in list title input filed
